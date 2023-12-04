@@ -1,0 +1,111 @@
+
+\chapter{Studio della migrazione}
+\label{StudiMigrazione}
+Questo capitolo descrive il fenomeno migratorio e le metodologie per studiarlo presenti in letteratura. Il capitolo tratta sia approcci tradizionali che non convenzionali, trattando con maggior attenzione il contesto della migrazione altamente qualificata.
+
+Il fenomeno migratorio è sempre stato una costante nella storia dell'uomo \cite{sirbu2021human}.  Durante i secoli ci sono stati diversi flussi migratori, dettati in molti casi da guerre e povertà, come le migrazioni dal continente Africano verso l'Europa \cite{eurpubcku105}. Di conseguenza, lo studio della migrazione ha interessato diversi settori di studio, e.g. sociologico, economico, demografico. 
+
+La migrazione è un fenomeno importante per il modo in cui rimodella la società, rendendola di natura molteplice. Inoltre, lo studio permette di determinarne diverse sfumature del fenomeno come le migrazioni temporanee dei lavoratori o i migranti che si stabiliscono in altri stati \cite{articleKingRussell}. 
+
+La migrazione è tipicamente analizzata tramite la quantificazione di flussi e scorte migratorie.
+I flussi migratori definiscono il numero di migranti che si spostano attraversano un confine, in un determinato periodo di tempo \cite{cherubini2016glossario}. Invece, le scorte migratorie definiscono il numero di migranti presenti in una zona in un determinato momento \cite{cherubini2016glossario}.
+Il termine immigrante viene usato per definire un non residente che intende stabilirsi in un luogo per un periodo superiore a 12 mesi\cite{cherubini2016glossario}.
+Viene definito emigrante una persona che sposta la propria residenza in uno stato estero in cui intende rimanere per un periodo superiore a 12 mesi \cite{cherubini2016glossario}.
+
+
+Ad oggi, sono stati impiegati sia dati e modelli tradizionali che non convenzionali al fine di indagare le questioni ancora aperte in tema di migrazione \cite{sirbu2021human}. Per dati tradizionali si intendono dati ottenuti attraverso istituzioni nazionali o internazionali (censimenti, sondaggi, indagini, registri della popolazione). I dati non convenzionali sono, in generale, \textit{Big Data}, ad esempio dati da social network e reti mobili.
+
+
+\section{Dati e approcci tradizionali} 
+\label{DatiTradizionali}
+Tradizionalmente, la migrazione è studiata mediante dati ufficiali derivanti da diverse fonti tra cui sondaggi, registri della popolazione \cite{sirbu2021human} e censimenti \cite{10.2307/24639395}. Questi dati sono molto utili nella ricerca del fenomeno della migrazione, ma soffrono di alcuni problemi. I dati vengono raccolti da vari enti privati o pubblici. Per esempio,
+in Italia i censimenti vengono effettuati dall'Istituto nazionale di statistica (ISTAT) ogni 10 anni.
+Tuttavia, questi enti possono registrare la popolazione in modo diverso da stato a stato \cite{poulain2006thesim}, producendo delle incongruenze nei dati. Un altro esempio è
+lo studio demografico delle scorte per United Nation (UN) che viene stimato tramite modelli migratori \footnote{UN Migration Stock Documentation: \url{https://www.un.org/en/development/desa/population/migration/data/estimates2/docs/MigrationStockDocumentation_2019.pdf}.}. 
+
+Alcuni stati non riescono a tener conto dei nativi che rientrano in patria, come ad esempio la Germania che sfrutta la cittadinanza come nazionalità e non il luogo di nascita portando a sovrastimare i numeri di migranti \cite{fassmann2009european}. Un altro problema è il fatto che non esiste una definizione univoca di migrante e diversi dataset e analisi usano terminologie differenti \cite{anderson2011counts}.
+
+Un altro svantaggio dei dati tradizionali è il tempo necessario per raccoglierli. La tempistica per stabilire se una persona si è trasferita, per quanto riguarda l'Europa, potrebbe richiedere anche due anni  \cite{deBeer2010}. Molti paesi Europei non hanno statistiche sugli emigranti a causa del fatto che gli emigranti non vengono incentivati nel segnalare il loro status alle amministrazioni di provenienza. Di conseguenza, i dati vengono raccolti con ritardo e possono non essere comparabili tra paesi. 
+
+
+% dataset disponibili 
+Ad oggi, esistono numerosi set di dati relativi alla migrazione, tra cui ISTAT \footnote{Statistiche Istat: \url{http://dati.istat.it/}}, Eurostat\footnote{Eurostat Database: \url{https://ec.europa.eu/eurostat/data/database}}, OECD\footnote{Internation Migration Database - OECD: \url{https://stats.oecd.org/Index.aspx?DataSetCode=MIG}}, United Nations\footnote{Global Migration Database - United Nations: \url{https://population.un.org/unmigration/index_sql.aspx}} e il MIMI. I dataset attualmente disponibili differiscono per copertura geografica e  temporale, accesso e livello di dettaglio.  I dati Eurostat riguardano principalmente il continente Europeo, ad esclusione della Gran Bretagna, per la quale non riporta dati. Al contrario, UN fornisce informazioni sui migranti relativi a 200 stati ottenuti attraverso censimenti della popolazione e indagini demografiche \footnote{UN Migration Stock Documentation: \url{https://www.un.org/en/development/desa/population/migration/data/estimates2/docs/MigrationStockDocumentation_2019.pdf}.}.
+In entrambi i dataset, le scorte di immigrati sono conteggiate su base quinquennale.  Livelli di aggregazione di questo tipo possono comportare la perdita di informazioni dettagliate, complicando ulteriormente la ricerca. Tuttavia, ad oggi diversi metodi sono stati proposti per arginare queste problematiche \cite{intmigunderthemicro}. 
+
+Il MIMI dataset è un'integrazione di dati da vari fonti tradizionali e non, che useremmo nel nostro lavoro per validare i dati estratti da Crunchbase. 
+Per quanto riguarda il livello di dettagli forniti sui migranti, come genere, età, residenza e istruzione, il MIMI dataset contiene informazioni relative ai migranti senza distinzioni di educazione. Al contrario, EUROSTAT ha pubblicato il Labour Force Survey (LFS) \cite{https://doi.org/10.2907/lfs1983-2020v.1} che include informazioni relative alle migrazioni di persone altamente formate dai 15 anni in su, dal 1983 al 2020. 
+Tuttavia, l'accesso ai dati dell'Labour Force Survey richiede un'attesa variabile\footnote{LFS data: \url{https://ec.europa.eu/eurostat/web/microdata/overview}.}.
+Inoltre i dati sono disponibili solo per un insieme di stati limitato\footnote{LFS States: \url{https://bit.ly/LFSstates}.}. 
+Il MIMI dataset comprende dati ottenuti da Eurostat e United Nation, insieme al Social Connectedness Index di Facebook\footnote{Social Connectedness Index Link: \url{https://dataforgood.facebook.com/dfg/tools/social-connectedness-index}.}.
+I dati del MIMI includono:
+\begin{itemize}
+    \item Paese di provenienza/nazionalità;
+    \item Paese di destinazione;
+    \item Scorte migratorie ottenute da UN su base quinquennale;
+    \item Flussi migratori annuali ottenuti sia da UN che da Eurostat basati sui cittadini e sui residenti.
+\end{itemize}
+Ai fini del lavoro proposto in questa tesi, è stato usato il MIMI dataset in quanto comprende sia dati UN che Eurostat. Tuttavia, il dataset impone alcune limitazioni, che provengono dalle fonti incluse in MIMI: 
+\begin{itemize}
+    \item I dati UN sulle scorte sono quinquennali;
+    \item I dati Eurostat sono limitati quasi totalmente al continente europeo;
+    \item I dati UN riguardano 200 stati in particolare è rappresentativo per sud est asiatico;
+    \item I dati sono riferiti a tutta la popolazione senza dettagli relativi al livelli di istruzione.
+\end{itemize}
+Ai fini del lavoro proposto in questa tesi, sono prese in considerazione le scorte relative al 2010, 2015 e 2020.  Per i flussi invece vengono considerati quelli tra il 2010 ed il 2020. 
+
+\subsection{Migrazione altamente qualificata}
+
+L'analisi delle migrazione di persone altamente qualificate, ad esempio con titoli accademici e lavori ad alto profilo, ha riscosso un crescente interesse negli ultimi anni, data la sua importanza per la produttività e l'educazione \cite{sirbu2021human}. 
+Un recente studio di Impicciatore et al. \cite{impicciatore2021emigrazione} studia il fenomeno migratorio internazionale degli studenti italiani laureati negli anni 2007, 2011 e 2015. I dati utilizzati provengono dall'ISTAT e lo studio mostra che gli studenti che decidono di emigrare sono prevalentemente quelli della classe agiata o che hanno ottenuto un voto di laurea elevato. Inoltre, tendono a spostarsi di più gli studenti delle discipline STEM\footnote{STEM: all'inglese science, technology, engineering and mathematics, indica le discipline di ambito  scientifico-tecnologico, come scienza, tecnologia, ingegneria e matematica.} con l'obiettivo di migliorare la loro situazione occupazionale. 
+
+L'analisi sull'impatto della Brexit effettuata da Falkingham et al. \cite{doi.org/10.1111/manc.12356} è focalizzata sulle migrazioni in Europa ed utilizza i dati del Survey of Graduating International Students (SoGIS) \cite{falkingham_wahba_giulietti_chuhong}. Lo studio, condotto su dati relativi all'anno 2017, confronta i dati precedenti e successivi alla data di inizio effettivo della Brexit (29 marzo 2017) mostrando che eventi di questa portata portano a generare incertezze nei piani sulla migrazione degli studenti in alcuni stati dell'Unione Europea. 
+
+Sheffer et al., \cite{Scheffer2018} hanno analizzato le migrazioni interne dei medici brasiliani, dal 1980 al 2014. Lo studio prende in considerazione genere ed età dei migranti e mostra che il 57,7\% dei medici nello studio ha migrato, il 93,4\% dei medici che hanno studiato in una città con meno di 100,000 abitanti ha migrato in altre città ed infine la percentuale di migranti di sesso femminile (54,2\%) è inferiore rispetto a quella maschile (60\%). 
+
+%% NON SONO SICURO 
+Utilizzando dati sulle migrazioni da OECD, Eurostat, United Nations e dall'LFS, Rainer M\"{u}nz \cite{Munz2007Migration} ha effettuato uno studio sulla dimensione della popolazione migrante Europea. Lo studio mostra come dal 2010 in poi l'Europa avrebbe dovuto competere in misura maggiore rispetto a prima con Australia, USA e Canada per essere scelta come meta dai lavoratori. 
+%% 
+
+Sebbene esistano sondaggi specifici a livello internazionale come il Gallup World Poll\footnote{Gallup World Poll: \url{https://www.gallup.com/analytics/318875/global-research.aspx}.}, l'Internation Social Survey Program (ISSP)\footnote{ISSP: \url{https://issp.org/}} e il Pew Global Attitudes Survey\footnote{Pew Globlal Attitudes Survey: \url{https://www.pewresearch.org/global/database/}}, questi ricoprono solo un insieme di stati (Gallup World Poll 160, ISSP 44, Pew 69).
+
+Altre studi possibili sono stati fatti attraverso dati dal programma Erasmus per studiare gli spostamenti degli studenti \cite{RodrguezGonzlez2011}, limitatamente ad alcuni stati dell'Europa.
+
+Nonostante gli sforzi della ricerca, le limitazioni imposte dai dati tradizionali, come copertura, accesso, metodi e tempistiche di raccolta non standardizzate tra paesi, lasciano molte domande aperte nello studio della migrazione umana e, in particolare, di quella altamente specializzata.
+
+
+\section{Approcci e dati non convenzionali} 
+\label{DatiNonConvenzionali}
+Le limitazioni poste dai dati e dall'analisi delle migrazioni tradizionale porta a ricercare metodi alternativi \cite{sirbu2021human}.
+Esistono diverse fonti di dati non convenzionali che sono state proposte in letteratura, come ad esempio reti mobili \cite{inferringpatternsofJoshua, Gonz_lez_2008}, la geolocalizzazione degli indirizzi IP \cite{pitsillidishottotell} e dati dei social network, come Facebook, Twitter \cite{zagheniinferringintermigr, JRC112310}. 
+
+Diversi lavori utilizzano fonti non convenzionali derivate dai social network per analizzare la migrazione umana. In \cite{zagheniinferringintermigr} è utilizzata
+la geolocalizzazione dei post di Twitter. Invece, in  \cite{JRC112310}, gli autori usano la rete di Facebook per stimare le scorte migratorie di alcuni paesi Europei.
+
+
+L'accesso ai dati non convenzionali avviene di solito tramite API\footnote{Application Programming Interface} specializzate, facilitando la raccolta di grandi quantità di dati. Allo stesso tempo, le API introducono sfide diverse, legate alla necessità di utilizzare linguaggi di programmazione e al dinamismo delle API stesse. Per queste e altre ragioni l'accesso ai dati di social network, talvolta, può essere arduo seguendo le vie abituali che richiedono l'utilizzo di un'API. Esistono vie alternative per accedere ai dati ad esempio dei social network, come mostrato in \cite{florentina2020web}. Gli autori hanno sfruttato tecnologie dedicate all'estrazione di dati da piattaforme Web su LinkedIn. Queste tecnologie possono essere descritte in maniera generale come algoritmi di web scraping. Lo scraping è in genere una simulazione dell'interazione umana con un entità web.  
+
+
+
+\subsection{Migrazione altamente qualificata}
+
+Tra le piattaforme di social networking alcune sono dedicate ai rapporti professionali, come ad esempio LinkedIn\footnote{LinkedIn: \url{https://it.linkedin.com/}.} e Crunchbase\footnote{CruncBase \url{https://www.crunchbase.com/}.}. I dati di queste piattaforme possono includere anche informazioni aggiuntive, come le esperienze lavorative e il percorso educativo. 
+
+
+
+
+In \cite{State2014} vengono sfruttati i dati ottenuti da LinkedIn, per studiare la migrazione dei professionisti durante il periodo compreso tra il 2000 ed il 2012. Tra i risultati si denota come gli Stati Uniti si confermino la destinazione più quotata per questo tipo di migranti, sebbene nel periodo di studio (2000-2012) sia diminuita la percentuale di persone che considerano gli Stati Uniti come meta per migrare. Inoltre, per lo stesso periodo, viene osservata una crescita da parte del continente asiatico come meta per le migrazioni altamente qualificate.
+Perrotta et al. \cite{Perrotta_Johnson_Theile_Grow_Valk_Zagheni_2022} hanno collezionato i dati relativi agli utenti dalla piattaforma per reclutatori di LinkedIn, nel periodo Ottobre 2020 - Settembre 2021. I dati sono stati utilizzati per determinare l'utilità e le limitazioni dell'utilizzo di LinkedIn nello studio delle intenzioni migratorie dei professionisti in Europa. Tra i risultati ottenuti viene indicano che gli stati del nord e dell'ovest Europa sono i più quotati da chi tra gli utenti LinkedIn è aperto a trasferimenti legati al lavoro. I dati collezionati hanno permesso quindi di identificare dei potenziali futuri migranti. Tuttavia, questo dataset da solo non è sufficiente per collegare chi ha espresso un desiderio di migrare con chi effettivamente migra. 
+
+
+
+
+Per l'accesso ai dati di LinkedIn e Crunchbase viene messa a disposizione una API. Tuttavia, LinkedIn nel 2015 ha limitato l'accesso alla propria API\footnote{ Developer Program Changes 2015 LinkedIn:\url{https://developer.linkedin.com/blog/posts/2015/developer-program-changes}.} e permette agli utenti di scaricare esclusivamente la propria rete.
+Crunchbase contiene informazioni su diverse entità come ad esempio organizzazioni, persone e scuole. Inoltre, include le relazioni tra le varie entità come gli investimenti, le relazioni lavorative e i percorsi di studio delle persone.
+A differenza di LikedIn, Crunchbase, fornisce l'accesso ai dati per fini di ricerca o attraverso la sottoscrizione di un abbonamento. 
+
+
+
+Questa tesi si colloca nell'ambito di ricerca della migrazione altamente qualificata attraverso fonti di dati non convenzionali, in particolare lavorando con dati di Crunchbase. Inoltre, questi dati sono stati validati con dati ufficiali contenuti nel MIMI dataset. L'analisi viene effettuata su scala globale e copre 10 anni, dal 2010 al 2020. Al meglio della nostra conoscenza, non è stato prodotto nessuno studio della migrazione umana utilizzando dati provenienti da Crunchbase. Quasi la totalità degli studi si sviluppano sulle organizzazioni ed i loro investimenti, sulle \textit{startup} ed il modo in cui si evolvono \cite{6c418d60-en}.
+
+
+

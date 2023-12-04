@@ -1,0 +1,46 @@
+\usepackage{fancyhdr}
+\newcommand{\fncyblank}{\fancyhf{}}
+
+
+\newcommand{\fncyfront}{%
+    \fancyhead[RO]{{\footnotesize\rightmark}}
+    \fancyfoot[RO]{\thepage}
+    \fancyhead[LE]{\footnotesize{\leftmark}}
+    \fancyfoot[LE]{\thepage}
+    \fancyhead[RE,LO]{}
+    \fancyfoot[C]{}
+    \renewcommand{\headrulewidth}{0.3pt}}
+
+\newcommand{\fncymain}{%
+    \fancyhead[RO]{{\footnotesize\MakeUppercase
+        \rightmark}}
+    \fancyfoot[RO]{\thepage}
+    \fancyhead[LE]{{\footnotesize\MakeUppercase
+        \leftmark}}
+    \fancyfoot[LE]{\thepage}
+    \fancyfoot[C]{}
+    \renewcommand{\headrulewidth}{0.3pt}}
+
+\makeatletter
+\let\old@makechapterhead\@makechapterhead
+% Taken from http://mirrors.ctan.org/macros/latex/unpacked/report.cls
+\def\fake@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \huge\bfseries \strut%\@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\newcommand{\newchapterhead}{\let\@makechapterhead\fake@makechapterhead}
+\newcommand{\restorechapterhead}{\let\@makechapterhead\old@makechapterhead}
+\makeatother
+
+\newenvironment{abstract}%
+{\cleardoublepage\fncyblank\null \vfill\begin{center}%
+\bfseries \abstractname \end{center}}%
+{\vfill\null}

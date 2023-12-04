@@ -1,0 +1,77 @@
+\documentclass[a4paper, 12pt, oneside, openright]{book}
+\author{Paul Magos}
+
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{indentfirst}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{cancel}
+\usepackage{comment}
+\usepackage{algorithm}
+\usepackage{chngcntr}
+\usepackage[section]{placeins}
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+\usepackage{subcaption} 
+
+\usepackage{tikz}
+
+\linespread{2}
+\pagestyle{plain} %nessun heading o foot particolare
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry} %impaginazione e margini documento
+\usepackage{graphicx, wrapfig} %gestione immagini e grafiche
+
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\input{custom}
+
+\counterwithin{figure}{section}
+
+\usepackage[titles]{tocloft}
+\cftsetindents{figure}{0em}{3.5em}
+
+\AtBeginEnvironment{minted}{%
+  \renewcommand{\fcolorbox}[4][]{#4}}
+
+
+\usepackage[absolute]{overpic}
+\usepackage{cleveref}
+\renewcommand{\listingscaption}{Codice}
+\renewcommand*{\thelisting}{\thesection.\arabic{listing}}
+\crefname{Codice}{}{Codici}
+
+
+\begin{document}
+%\fncyfront
+
+
+\frontmatter
+% Inserisco il frontespizio ed inizializzo l'indice, che si popolerà autonomamente
+\input{chapters/Frontespizio}
+\input{chapters/frontespizio2}
+\input{chapters/ded}
+\addtocounter{chapter}{1}
+\tableofcontents
+%\listoffigures
+
+%\fncymain
+% Definisco il corpo della tesi
+\mainmatter
+% Includo i vari capitoli
+\input{chapters/Introduzione}
+\input{chapters/Capitolo2}
+\input{chapters/Capitolo3}
+\input{chapters/Capitolo4}
+\input{chapters/Conclusione}
+
+
+\backmatter
+%\listoflistings
+% Definisco la bibliografia automatica
+\bibliographystyle{plain} 
+\bibliography{chapters/Bibliografia} % Entries are in the Bibliografia.bib file
+\end{document}

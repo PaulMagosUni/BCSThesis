@@ -1,0 +1,28 @@
+\chapter*{Introduzione}
+\addcontentsline{toc}{chapter}{1 \hspace{5pt} Introduzione}
+Lo studio della migrazione riguarda numerosi campi di studio data la sua importanza economica, sociale e per lo sviluppo di nuove politiche. Una categoria di questo fenomeno in particolare è quella della migrazione altamente qualificata ovvero delle persone con un bagaglio di conoscenze di alto livello.
+Lo studio di questo fenomeno può portare diversi benefici, come l'analisi dell'integrazione dei migranti altamente qualificati con i nativi della stessa categoria. Ad esempio i dati sugli impieghi possono indicare le aree nelle quali i migranti di questa categoria si specializzino maggiormente \cite{KerrSalriOzden, PeriSharber}. Altri esempi sono lo studio delle competenze dei migranti altamente qualificati in Italia \cite{impicciatore2021emigrazione}, o  gli effetti di avvenimenti di grande portata come la Brexit \cite{doi.org/10.1111/manc.12356}.
+
+Tradizionalmente, gli studi si sono affidati a dati ufficiali raccolti da istituzioni e enti. 
+Tuttavia, spesso, i dati ufficiali sono disponibili con ritardo e non sono confrontabili tra stati a causa della mancanza di uno standard nella raccolta \cite{deBeer2010, poulain2006thesim}. 
+Recentemente, la disponibilità dei Big Data ha portato la ricerca a sperimentare la possibilità di usare nuove fonti di dati per aggirare e colmare le limitazioni tradizionali. 
+Tra le nuove risorse di dati, i cosiddetti social-big data includono diversi tipi di tracce digitali prodotte dalle persone mediante dispositivi mobili, servizi online e piattaforme di social networking \cite{sirbu2021human}. 
+Data la complessità del fenomeno migratorio e nonostante gli sforzi della ricerca, molti aspetti possono essere ulteriormente indagati. 
+In particolare, grazie a piattaforme di social networking orientate all'ambito lavorativo, come LinkedIn\footnote{LinkedIn \url{https://www.linkedin.com/}} e Crunchbase \footnote{Crunchbase: \url{https://www.crunchbase.com/}}, è possibile osservare informazioni sugli spostamenti dei professionisti attraverso dati non convenzionali. 
+
+Questa tesi propone una metodologia per la collezione e l'estrazione di flussi e scorte migratorio da dati provenienti da Crunchbase, per l'analisi della migrazione altamente qualificata. Inoltre, lo studio mira a valutare l'attendibilità dei dati estratti da Crunchbase mediante il confronto con dati ufficiali, provenienti da Eurostat e United Nations. 
+
+
+
+
+Per la raccolta dati confrontiamo due metodologie diverse. La prima si basa su una procedura di web scraping semi-automatica sul motore di ricerca di Crunchbase, e raccoglie dati aggregati e anonimizzati. La seconda utilizza il Academic Access per ottenere dati su utenti Crunchbase. Per determinare i flussi e le scorte sono state effettuate alcune assunzioni sulla nazionalità possibile di un utente, basandosi sui suoi titoli di studio e sui lavori passati.
+Infine, la validazione è stata effettuata attraverso il confronto di scorte e flussi con i rispettivi dati presenti nel Multi-aspect Integrated Migration Indicators (MIMI) dataset \cite{MIMIDOC}. 
+
+
+Il lavoro svolto ha permesso di acquisire nuove competenze legate all'analisi e la manipolazione del traffico dei siti web, alla programmazione in Python, alla realizzazione di grafici per visualizzare dati complessi come flussi migratori, e al calcolo di correlazioni per i dati visualizzati. Inoltre, sono stati appresi concetti come i flussi migratori e le scorte di migranti, e sono state comprese varie domande di ricerca studiate in ambiti diversi dall'informatica.
+
+Il resto della tesi è strutturato come segue.
+Nel Capitolo \ref{StudiMigrazione} vengono introdotti gli argomenti centrali dello studio, con particolare attenzione alla migrazione altamente qualificata. Il capitolo presenta dati e approcci tradizionale (Sezione \ref{DatiTradizionali}) e, successivamente, i dati e metodi non convenzionali (Sezione \ref{DatiNonConvenzionali}). 
+Il Capitolo \ref{capitolometodologia} illustra le metodologie e le tecnologie utilizzate per la collezione dei dati, per l'invio di richieste ai server Crunchbase, l'organizzazione dei dati ottenuti attraverso l'accesso accademico e, infine, la validazione dei dati collezionati. 
+Il Capitolo \ref{capitoloanalisi} si concentra sulle analisi effettuate, in primo luogo sull'utenza Crunchbase e la sua provenienza. In seguito vengono mostrati e discussi tutti i casi di studio di confronto tra i dati Crunchbase e i dati del MIMI. Alcuni casi di studio si concentrano su alcuni paesi di interesse, come l'Italia e il Regno Unito. 
+Infine, il Capitolo \ref{conclusione} conclude l'elaborato discutendo i risultati ottenuti e  le limitazioni incontrate, insieme ai possibili studi futuri.
