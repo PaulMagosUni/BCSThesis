@@ -1,1 +1,1 @@
-# BCSThesis
+# Paul M. Magos BCS Thesis, University of Pisa.
